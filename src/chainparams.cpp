@@ -151,7 +151,7 @@ public:
         nModifierUpdateBlock = 999999999;
         nZerocoinStartHeight = 50000;
         nAccumulatorStartHeight = 15000;
-        nZerocoinStartTime = 1538918141; // 14 - apr - 2018
+        nZerocoinStartTime = 1536918623 + 60000; // 14 - apr - 2018
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = ~1; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = ~1; //First block that bad serials emerged
@@ -168,7 +168,7 @@ public:
             genesis.hashMerkleRoot = 90d274dca16659997d8f5fc9644127d260087d4a39ca61ba9b3334482aa8c55d
 
          */
-        const char* pszTimestamp = "cores core / coresmail";
+        const char* pszTimestamp = "cores core / coresmail v2";
         CMutableTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -179,9 +179,17 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1536873791;
+        genesis.nTime = 1536918623;
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 3139067;
+
+        while (!CheckProof(genesis.GetHash(), genesis.nBits)) {
+          genesis.nNonce ++;
+        }
+
+        std::cout << genesis.nNonce << std::endl;
+        std::cout << genesis.GetHash().GetHex() << std::endl;
+        std::cout << genesis.hashMerkleRoot.GetHex() << std::endl;
 
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x00000e54b60fd8ca83a62a3845998245d95881a3a1b408d4c30aa5bc7020571a"));
@@ -214,7 +222,7 @@ public:
         //strSporkKey = "0459eede7626441f7802af2736cb3a4aeb3e1f95070cde39d068a4f16525ee8fdd3c075f29f9e115aeb91952239194aa6ac19765574fed8a0d7f174f2b450e9630";
 		    strSporkKey = "03d1a6656a67f078d52791b51ea8e246b3b542b22ebaa15e55c0ba3453b74e01f5";
         strObfuscationPoolDummyAddress = "CaJAo1A7gPBftYSHywtBN7XRfHTWWQeJm4";
-        nStartMasternodePayments = 1536912515 + 6000; //Wed, 25 Jun 2014 20:36:16 GMT
+        nStartMasternodePayments = 1536918623 + 6000; //Wed, 25 Jun 2014 20:36:16 GMT
 
         /** Zerocoin */
         zerocoinModulus = "0xc95577b6dce0049b0a20c779af38079355abadde1a1d80c353f6cb697a7ae5a087bad39caa5798478551d0f9d91e6267716506f32412de1d19d17588765eb9502b85c6a18abdb05791cfd8b734e960281193705eeece210920cc922b3af3ceb178bf12c22eb565d5767fbf19545639be8953c2c38ffad41f3371e4aac750ac2d7bd614b3faabb453081d5d88fdbb803657a980bc93707e4b14233a2358c97763bf28f7c933206071477e8b371f229bc9ce7d6ef0ed7163aa5dfe13bc15f7816348b328fa2c1e69d5c88f7b94cee7829d56d1842d77d7bb8692e9fc7b7db059836500de8d57eb43c345feb58671503b932829112941367996b03871300f25efb5";
