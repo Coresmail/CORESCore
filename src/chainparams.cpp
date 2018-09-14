@@ -147,10 +147,10 @@ public:
         nMaxMoneyOut = 2000000000 * COIN;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 100;
+        nLastPOWBlock = 60;
         nModifierUpdateBlock = 999999999;
-        nZerocoinStartHeight = 50000;
-        nAccumulatorStartHeight = 15000;
+        nZerocoinStartHeight = 601;
+        nAccumulatorStartHeight = 1;
         nZerocoinStartTime = 1536918623 + 60000; // 14 - apr - 2018
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = ~1; //Trigger a recalculation of accumulators
