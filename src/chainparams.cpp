@@ -190,7 +190,7 @@ public:
 //        std::cout << genesis.nNonce << std::endl;
 //        std::cout << genesis.GetHash().GetHex() << std::endl;
 //        std::cout << genesis.hashMerkleRoot.GetHex() << std::endl;
-
+        hashGenesisBlock = uint256("0x00000768f9afc0d8aed2876075a52b27d431b83d83ae5092426c2e8187fbd34c");
         hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x00000768f9afc0d8aed2876075a52b27d431b83d83ae5092426c2e8187fbd34c"));
         assert(genesis.hashMerkleRoot == uint256("0x948237ef38eeafc36f8fb1b2a8830154cbb39a5faf09b7c33b6f18bba025d5ec"));
