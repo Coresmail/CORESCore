@@ -1,0 +1,30 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/cores_bg.qm</file>
+        <file alias="ca">locale/cores_ca.qm</file>
+        <file alias="cs">locale/cores_cs.qm</file>
+        <file alias="da">locale/cores_da.qm</file>
+        <file alias="de">locale/cores_de.qm</file>
+        <file alias="en">locale/cores_en.qm</file>
+        <file alias="en_US">locale/cores_en_US.qm</file>
+        <file alias="es">locale/cores_es.qm</file>
+        <file alias="fi">locale/cores_fi.qm</file>
+        <file alias="fr_FR">locale/cores_fr_FR.qm</file>
+        <file alias="hr">locale/cores_hr.qm</file>
+        <file alias="it">locale/cores_it.qm</file>
+        <file alias="ja">locale/cores_ja.qm</file>
+        <file alias="ko_KR">locale/cores_ko_KR.qm</file>
+        <file alias="nl">locale/cores_nl.qm</file>
+        <file alias="pl">locale/cores_pl.qm</file>
+        <file alias="pt">locale/cores_pt.qm</file>
+        <file alias="pt_BR">locale/cores_pt_BR.qm</file>
+        <file alias="ro_RO">locale/cores_ro_RO.qm</file>
+        <file alias="ru">locale/cores_ru.qm</file>
+        <file alias="sk">locale/cores_sk.qm</file>
+        <file alias="sv">locale/cores_sv.qm</file>
+        <file alias="tr">locale/cores_tr.qm</file>
+        <file alias="uk">locale/cores_uk.qm</file>
+        <file alias="zh_CN">locale/cores_zh_CN.qm</file>
+        <file alias="zh_TW">locale/cores_zh_TW.qm</file>
+    </qresource>
+</RCC>

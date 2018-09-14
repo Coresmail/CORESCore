@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=cores
+Comment=cores P2P Cryptocurrency
+Comment[fr]=cores, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=cores, eşten eşe kriptografik sanal para birimi
+Exec=cores-qt %u
+Terminal=false
+Type=Application
+Icon=cores128
+MimeType=x-scheme-handler/cores;
+Categories=Office;Finance;
