@@ -152,7 +152,7 @@ void CMasternodeSync::GetNextAsset()
         break;
         */
     case (MASTERNODE_SYNC_LIST):
-        RequestedMasternodeAssets = MASTERNODE_SYNC_MNW;
+        RequestedMasternodeAssets = MASTERNODE_SYNC_FINISHED;
         break;
     case (MASTERNODE_SYNC_MNW):
         RequestedMasternodeAssets = MASTERNODE_SYNC_BUDGET;
