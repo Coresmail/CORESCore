@@ -142,7 +142,7 @@ public:
         nTargetTimespan = 1 * 80; //
         nTargetSpacingSlowLaunch = 10 * 60;  //
         nTargetSpacing = 1 * 60;  //
-        nMaturity = 60;
+        nMaturity = 20;
         nMasternodeCountDrift = 20;
         nMaxMoneyOut = 2000000000 * COIN;
 
