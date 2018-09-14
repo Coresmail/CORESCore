@@ -181,19 +181,19 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1536918623;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 3139067;
+        genesis.nNonce = 4357187;
 
-        while (!CheckProof(genesis.GetHash(), genesis.nBits)) {
-          genesis.nNonce ++;
-        }
+//        while (!CheckProof(genesis.GetHash(), genesis.nBits)) {
+//          genesis.nNonce ++;
+//        }
 
-        std::cout << genesis.nNonce << std::endl;
-        std::cout << genesis.GetHash().GetHex() << std::endl;
-        std::cout << genesis.hashMerkleRoot.GetHex() << std::endl;
+//        std::cout << genesis.nNonce << std::endl;
+//        std::cout << genesis.GetHash().GetHex() << std::endl;
+//        std::cout << genesis.hashMerkleRoot.GetHex() << std::endl;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000e54b60fd8ca83a62a3845998245d95881a3a1b408d4c30aa5bc7020571a"));
-        assert(genesis.hashMerkleRoot == uint256("0x3d1e2931384aa1326387d11c5b5f48581dcbc19875aca2e0d9ec0738c03b6076"));
+        assert(hashGenesisBlock == uint256("0x00000768f9afc0d8aed2876075a52b27d431b83d83ae5092426c2e8187fbd34c"));
+        assert(genesis.hashMerkleRoot == uint256("0x948237ef38eeafc36f8fb1b2a8830154cbb39a5faf09b7c33b6f18bba025d5ec"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.
         vSeeds.clear();      //! Testnet mode doesn't have any DNS seeds.
